@@ -1,7 +1,7 @@
 let IS_PROD = true;
 
 const server = IS_PROD ?
-     "https://mybackend.onrender.com" :
+     "https://nexus-video-call.onrender.com" :
      "http://localhost:8000"
     
 
