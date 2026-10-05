@@ -13,7 +13,6 @@ import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import Badge from "@mui/material/Badge";
 import ChatIcon from '@mui/icons-material/Chat';
-import { useNavigate } from "react-router-dom";
 import server from "../environment";
 
 
@@ -53,6 +52,7 @@ let [videos, setVideos] = useState([])
 
   useEffect(()=>{
    getPermisssion();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
 
@@ -118,10 +118,8 @@ const getPermisssion =async()=>{
         if (video !== undefined && audio !== undefined) {
             getUserMedia();
             console.log("SET STATE HAS ", video, audio);
-
         }
-
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [video, audio])
     let getMedia = () => {
         setVideo(videoAvailable);
